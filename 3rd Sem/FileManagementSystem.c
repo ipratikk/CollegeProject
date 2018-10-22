@@ -1,3 +1,20 @@
+/************************* File Management System *********************************/
+/* Problem Statement
+
+The system should follow the working principle of ‘ls’ command in Linux Operating system. It
+should be able to show the files, folders under the current directory. The user should be able to
+add file, folders under specific folder. If the folder under which the user want to add the files do
+not exist, it should be created first and then the files/folders should be added. Use tree data
+structure to implement the system. Please note that this files or folders mentioned above need not
+to be created physically. Storing the names would be sufficient.
+
+*/
+/*************************************************************************************/
+
+/*Solution*/
+
+/* @Project by Pratik Goel */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -41,9 +58,17 @@ int main()
 		else if(strcmp(command, "file") == 0)
 			folder(currentDirectory, filename, "file");
 		else if(strcmp(command, "tree") == 0)
+		{
+			printf("\n");
 			display(root, 0);
+			printf("\n");
+		}
 		else if(strcmp(command, "ls") == 0)
-			ls(currentDirectory);
+		{
+			printf("\n");
+			display(currentDirectory,0);
+			printf("\n");
+		}
 		else if(strcmp(command, "sd") == 0)
 			showCurrentDirectory(currentDirectory);
 		else if(strcmp(command, "cd") == 0)
@@ -70,8 +95,8 @@ void commands()
 	printf("help all: get the list of commands\n");
 	printf("exit 0: to exit the console\n");
 	printf("Commands are specific to this program and not to be confused with DOS/Linux terminal commands\n");
-	printf("----represents a folder\n");
-	printf("~~~~represents a file\n\n");
+	printf("fol:represents a folder\n");
+	printf("fil:represents a file\n\n");
 }
 void folder(dir *temp, char filename[30], char filetype[10])
 {
@@ -108,14 +133,14 @@ void display(dir *temp, int level)
     if(temp == NULL)
         return;
 	int i;	//loop variable
-	//print '-' for folders
+	//print 'fol:' for folders
 	if(strcmp(temp->filetype, "folder") == 0)
 		for(i=1; i <= level; i++)
-			printf("---");
-	//print '~' for files
+			printf("fol: ");
+	//print 'fil:' for files
 	else if(strcmp(temp->filetype, "file") == 0)
 		for(i=1; i <= level; i++)
-			printf("~~~");
+			printf("fil: ");
 	printf("%s\n", temp->filename);
 	//call all the subdirectories/files recursively
 	for(i=0; i<100 && temp->link[i] != NULL; i++)
