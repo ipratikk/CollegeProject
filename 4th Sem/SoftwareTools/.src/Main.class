@@ -3,7 +3,7 @@
 Public Material[100] As String
 Public Quantity[100] As Integer
 Public Rate[100] As Float
-Static Public Top As Integer = 0
+Static Public Top2 As Integer = 0
 Public Sub Form_Open()
 
   	Timer1.Enabled = True
@@ -42,6 +42,7 @@ End
 
 Public Sub Button3_Click()
 
+  'Message.Info(Str(Top2), "OK")'
   Stocks.Show()
 
 End

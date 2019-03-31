@@ -40,7 +40,8 @@ Public Sub Check() As Integer
   
   Dim i, ind As Integer
   ind = -1
-  For i = 0 To T Step 1
+  
+  For i = 0 To Max(T, Main.top2) Step 1
     If Comp(Material[i], Val) == 0 Then
       Return i
     Endif
@@ -78,8 +79,7 @@ Public Sub in()
   
   Dim i, k As Integer
   For i = 0 To T Step 1
-    k = Main.Top + i
-    Message.Info(Main.Top, "ok")
+    k = Main.Top2 + i
     Main.Material[k] = Material[i]
     Main.Rate[k] = RRate[i]
     Main.Quantity[k] = Quantity[i]
@@ -90,7 +90,7 @@ End
 Public Sub Button2_Click()
 
   in()
-  Main.Top += T
+  Main.Top2 += T
   Update.Close(0)
 End
 

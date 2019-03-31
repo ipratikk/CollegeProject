@@ -1,8 +1,77 @@
 ' Gambas class file
 
-
+Public T As Integer = 0
 Public Sub Form_Open()
 
-  Stocks.Background = Color.Red
+  Stocks.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+  Label1.Font.Bold = True
+  Label2.Font.Bold = True
+  init()
+  ProductsList.Columns.Count = 3
+  ProductsList.Header = 1 'show header 
+  ProductsList.Mode = Select.Single
+  ProductsList.Columns[0].Text = "Product" 
+  ProductsList.Columns[0].Width = 280
+  ProductsList.Columns[1].Text = "Quantity"
+  ProductsList.Columns[1].Width = 220
+  ProductsList.Columns[2].Text = "Rate (INR)" 
+  ProductsList.Columns[2].Width = 220
+  ProductsList.Columns[0].Alignment = Align.Center
+  ProductsList.Columns[1].Alignment = Align.Center
+  ProductsList.Columns[2].Alignment = Align.Center
+
+End
+Public Sub init()
+  
+  Dim i As Integer
+  For i = 0 To Main.Top2 Step 1
+    If Comp(Main.Material[i], "") == 0 Then
+      Continue
+    Else
+      ComboBox1.Add(Main.Material[i])
+      T+=1
+    Endif
+  Next
+  
+End
+
+Public Sub Button1_Click()
+
+  ProductsList.Clear()
+  Dim cmp As String
+  Dim i, ind As Integer
+  cmp = ComboBox1.Text
+  For i = 0 To Main.Top2 Step 1
+    If Comp(cmp, Main.Material[i]) == 0 Then
+      ind = i
+      Break
+    Endif
+  Next
+  ProductsList.Add("0", Main.Material[ind])
+  ProductsList["0"][1] = Main.Quantity[ind]
+  ProductsList["0"][2] = Main.Rate[ind]
+
+End
+
+Public Sub Button2_Click()
+
+  ProductsList.Clear()
+  Dim i As Integer
+  For i = 0 To Main.Top2 Step 1
+    If Comp(Main.Material[i], "") == 0 Then
+      Break
+    Else
+      ProductsList.Add(Str(i), Main.Material[i])
+    ProductsList[Str(i)][1] = Main.Quantity[i]
+    ProductsList[Str(i)][2] = Main.Rate[i]
+    Endif
+  Next
+  
+End
+
+Public Sub Button3_Click()
+
+  Stocks.Close(0)
+  Main.Show()
 
 End

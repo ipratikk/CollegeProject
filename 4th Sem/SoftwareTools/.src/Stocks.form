@@ -2,4 +2,38 @@
 
 { Form Form
   MoveScaled(0,0,106,105)
+  { ProductsList ColumnView
+    MoveScaled(7,27,90,72)
+    Sorted = True
+    Editable = True
+    AutoResize = False
+    Border = False
+  }
+  { Label1 Label
+    MoveScaled(7,2,90,7)
+    Font = Font["Bold,+10"]
+    Text = ("Stock Enquiry")
+    Alignment = Align.Center
+  }
+  { Label2 Label
+    MoveScaled(8,16,14,4)
+    Font = Font["Bold"]
+    Text = ("Product Name")
+    Alignment = Align.Center
+  }
+  { Button1 Button
+    MoveScaled(50,16,16,4)
+    Text = ("View")
+  }
+  { ComboBox1 ComboBox
+    MoveScaled(23,16,24,4)
+  }
+  { Button2 Button
+    MoveScaled(68,16,16,4)
+    Text = ("View All")
+  }
+  { Button3 Button
+    MoveScaled(85,16,16,4)
+    Text = ("Close")
+  }
 }
