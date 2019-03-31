@@ -1,5 +1,11 @@
 # Gambas Form File 3.0
 
-{ Form3 Form
-  MoveScaled(0,0,64,64)
+{ Form Form
+  MoveScaled(0,0,144,104)
+  { Label1 Label
+    MoveScaled(23,3,92,10)
+    Font = Font["Bold,+10"]
+    Text = ("Stock Enquiry")
+    Alignment = Align.Center
+  }
 }
