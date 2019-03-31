@@ -1,0 +1,43 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  Sale.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+  Label1.Caption = "Name"
+  Label2.caption = "Phone"
+  Label3.Caption = "Address"
+  Label4.Caption = "Aadhar Number"
+  Label1.Font.Bold = True
+  Label2.Font.Bold = True
+  Label3.Font.Bold = True
+  Label4.Font.Bold = True
+  init()
+  ProductsList.Columns.Count = 4
+  ProductsList.Header = 1 'show header 
+  ProductsList.Mode = Select.Single 
+  ProductsList.Columns[0].Text = "Product" 
+  ProductsList.Columns[1].Text = "Quantity" 
+  ProductsList.Columns[2].Text = "Rate" 
+  ProductsList.Columns[3].Text = "Amount"
+End
+Public Sub init()
+  
+  For i As Integer = 0 To Main.Top
+    product.Add(Main.Material[i])
+  Next
+  For i As Integer = 0 To Main.Top
+    qty.Add(Str(i))
+  Next
+  
+End
+
+Public Sub Button1_Click()
+  If product.Text = "Product" Or qty.Text = "Qty" Then
+    Message.Info("Invalid Entry", "OK")
+  Else
+    ProductsList.Add(Main.Top, product.Text)
+    ProductsList[Main.Top][1] = qty.Text
+    Inc Main.Top
+  Endif
+End

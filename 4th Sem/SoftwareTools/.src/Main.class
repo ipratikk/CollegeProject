@@ -1,0 +1,47 @@
+' Gambas class file
+
+Public Material[100] As String
+Public Quantity[100] As Integer
+Public Rate[100] As Float
+Static Private Top As String = 1
+Public Sub Form_Open()
+
+  	Timer1.Enabled = True
+  	Timer1.Delay = 250
+  	Button1.Font.Size = 14
+  	Button2.Font.Size = 14
+  	Button3.Font.Size = 14
+
+End
+
+Public Sub Timer1_Timer()
+
+  Dim p, q, r As Integer
+  p = Int(Rnd * 55)
+  q = Int(Rnd * 50)
+  r = Int(Rnd * 45)
+  Main.Background = Color.RGB(p, q, r)
+  Label1.Foreground = Color.RGB(p + 200, q + 200, r + 200)
+  Button1.Foreground = Color.RGB(p + 100, q + 100, r + 100)
+  Button2.Foreground = Color.RGB(p + 100, q + 100, r + 100)
+  Button3.Foreground = Color.RGB(p + 100, q + 100, r + 100)
+  
+End
+
+Public Sub Button1_Click()
+
+  Sale.Show()
+
+End
+
+Public Sub Button2_Click()
+
+  Update.Show()
+
+End
+
+Public Sub Button3_Click()
+
+  Stock.Show()
+
+End
