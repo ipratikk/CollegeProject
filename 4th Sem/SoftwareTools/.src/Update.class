@@ -1,6 +1,8 @@
 ' Gambas class file
 
+Static Private Top As Integer = 0
 Private Val As String
+
 Public Sub Button1_Click()
   Dim tmp As Integer
   Dim tmp2 As Float
@@ -9,31 +11,37 @@ Public Sub Button1_Click()
   Else
     Val = product.Text
     tmp = Check()
-    If tmp == -1 Then
-      Main.Quantity[Main.Top] = Val(qty.Text)
-      Main.Rate[Main.Top] = Val(Rate.Text)
+    If tmp = -1 Then
+      Main.Material[Top] = product.Text
+      Main.Quantity[Top] = Val(qty.Text)
+      Main.Rate[Top] = Val(Rate.Text)
+      ProductsList.Add(Top, product.Text)
+      ProductsList[Top][1] = qty.Text
+      ProductsList[Top][2] = Rate.Text
+      Inc Top
     Else
-      Main.Quantity[tmp] + = Val(qty.Text)
-      tmp2 = ((Main.Rate[tmp] * (Main.Quantity[tmp] - Val(Rate.Text))) + (Val(Rate.Text) * Val(qty.Text))) / (Main.Quantity[tmp])
-      Main.Rate[tmp] = tmp2
+      If Main.Rate[tmp] == Val(Rate.Text) Then
+        Main.Quantity[tmp] = Main.Quantity[tmp] + Val(qty.Text)
+        ProductsList.Add(Top, product.Text)
+        ProductsList[Top][1] = qty.Text
+        ProductsList[Top][2] = Rate.Text
+        Inc Top
+      Else
+        Message.Info("Different Rate for Different Quantity will be added later in future update", "Ok")
+      Endif
     Endif
-    ProductsList.Add(Main.Top, product.Text)
-    ProductsList[Main.Top][1] = qty.Text
-    ProductsList[Main.Top][2] = Rate.Text
-    Inc Main.Top
   Endif
-
 End
+
 Public Sub Check() As Integer
   
   Dim i, ind As Integer
   ind = -1
-  For i = 0 To Main.Top Step 1
-  If Main.Material[i] == Val Then
-    ind = i
-    Break
-  Endif
-  Next
+  For i = 0 To Top Step 1
+    If Comp(Main.Material[i], Val) == 0 Then
+      Return i
+    Endif
+   Next
   Return ind
 End
 
@@ -54,4 +62,11 @@ Public Sub init()
     qty.Add(Str(i))
   Next
   
+End
+
+Public Sub Button2_Click()
+
+  Main.Top = Top
+  Update.Close(0)
+
 End

@@ -36,4 +36,8 @@
     Text = ("Product Name")
     Alignment = Align.Center
   }
+  { Button2 Button
+    MoveScaled(58,73,16,4)
+    Text = ("Close")
+  }
 }
