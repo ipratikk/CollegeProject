@@ -29,7 +29,7 @@ Public Sub init()
       Continue
     Else
       ComboBox1.Add(Main.Material[i])
-      T+=1
+      T += 1
     Endif
   Next
   
