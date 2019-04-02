@@ -31,12 +31,14 @@ End
 Public Sub Button1_Click()
 
   Sale.Show()
+  Main.Hide()
 
 End
 
 Public Sub Button2_Click()
 
   Update.Show()
+  Main.Hide()
 
 End
 
@@ -44,5 +46,6 @@ Public Sub Button3_Click()
 
   'Message.Info(Str(Top2), "OK")'
   Stocks.Show()
+  Main.Hide()
 
 End

@@ -1,0 +1,50 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,120,104)
+  Background = &HC0C0C0&
+  AutoResize = True
+  { namelabel Label
+    MoveScaled(-14,3,24,4)
+    Foreground = Color.Black
+    Alignment = Align.Right
+  }
+  { nameans Label
+    MoveScaled(11,3,24,4)
+    Foreground = Color.Black
+  }
+  { phonelabel Label
+    MoveScaled(26,3,24,4)
+    Foreground = Color.Black
+    Alignment = Align.Right
+  }
+  { phoneans Label
+    MoveScaled(51,3,24,4)
+    Foreground = Color.Black
+  }
+  { addlabel Label
+    MoveScaled(-14,7,24,4)
+    Foreground = Color.Black
+    Alignment = Align.Right
+  }
+  { addans Label
+    MoveScaled(11,7,24,4)
+    Foreground = Color.Black
+  }
+  { adharlabel Label
+    MoveScaled(26,7,24,4)
+    Foreground = Color.Black
+    Alignment = Align.Right
+  }
+  { adharans Label
+    MoveScaled(51,7,24,4)
+    Foreground = Color.Black
+  }
+  { cv1 ColumnView
+    MoveScaled(2,13,113,78)
+    Font = Font["Bold"]
+    Background = &HC0C0C0&
+    Foreground = Color.Black
+    Expand = True
+  }
+}

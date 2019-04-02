@@ -1,6 +1,11 @@
 ' Gambas class file
 
-
+Public am As Float = 0.0
+Public T As Integer = 0
+Public a1 As String
+Public a2 As String
+Public a3 As String
+Public a4 As String
 Public Sub Form_Open()
 
   Sale.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
@@ -17,27 +22,81 @@ Public Sub Form_Open()
   ProductsList.Header = 1 'show header 
   ProductsList.Mode = Select.Single 
   ProductsList.Columns[0].Text = "Product" 
-  ProductsList.Columns[1].Text = "Quantity" 
-  ProductsList.Columns[2].Text = "Rate" 
-  ProductsList.Columns[3].Text = "Amount"
+  ProductsList.Columns[0].Width = 220
+  ProductsList.Columns[1].Text = "Quantity"
+  ProductsList.Columns[1].Width = 140
+  ProductsList.Columns[2].Text = "Rate (INR)" 
+  ProductsList.Columns[2].Width = 170
+  ProductsList.Columns[0].Alignment = Align.Center
+  ProductsList.Columns[1].Alignment = Align.Center
+  ProductsList.Columns[2].Alignment = Align.Center
+  ProductsList.Columns[3].Text = "Amount" 
+  ProductsList.Columns[3].Width = 180
+  ProductsList.Columns[3].Alignment = Align.Center
+  
 End
 Public Sub init()
   
-  For i As Integer = 0 To Main.Top
+  For i As Integer = 0 To Main.Top2 Step 1
     product.Add(Main.Material[i])
   Next
-  For i As Integer = 0 To Main.Top
+  For i As Integer = 0 To 20 Step 1
     qty.Add(Str(i))
   Next
   
 End
+Public Sub find() As Integer
+  
+  Dim cmp As String
+  Dim i, ind As Integer
+  ind = -1
+  cmp = product.Text
+  For i = 0 To Main.Top2 Step 1
+    If Comp(cmp, Main.Material[i]) == 0 Then
+      ind = i
+      Break
+    Endif
+  Next
+  Return ind
+  
+End
 
 Public Sub Button1_Click()
+  Dim i As Integer
+  Dim tmp As Float
   If product.Text = "Product" Or qty.Text = "Qty" Then
     Message.Info("Invalid Entry", "OK")
   Else
-    ProductsList.Add(Main.Top, product.Text)
-    ProductsList[Main.Top][1] = qty.Text
-    Inc Main.Top
+    i = find()
+    If Main.Quantity[i] < Val(qty.Text) Then
+      Message.Info("Quantity out of stock", "OK")
+    Else
+      ProductsList.Add(T, Main.Material[i])
+      ProductsList[T][1] = Val(qty.Text)
+      ProductsList[T][2] = Main.Rate[i]
+      tmp = Val(qty.Text) * Main.Rate[i]
+      ProductsList[T][3] = tmp
+      Main.Quantity[i] = Main.Quantity[i] - Val(qty.Text)
+      am = am + tmp
+      Inc T
+    Endif
+    Inc Main.Top2
   Endif
+End
+
+Public Sub Button3_Click()
+
+  a1 = namebox.Text
+  a2 = adharbox.Text
+  a3 = adbox.Text
+  a4 = phbox.Text
+  display.Show()
+
+End
+
+Public Sub Button2_Click()
+
+  Sale.Close(0)
+  Main.Show()
+
 End

@@ -1,0 +1,33 @@
+' Gambas class file
+
+Public Sub Form_Open()
+
+  nameans.Caption = Sale.a1
+  phoneans.Caption = Sale.a4
+  addans.Caption = Sale.a3
+  adharans.Caption = Sale.a2
+  namelabel.Caption = "Name:"
+  phonelabel.Caption = "Phone:"
+  adharlabel.Caption = "Aadhar:"
+  addlabel.Caption = "Address:"
+  addlabel.Font.Bold = True
+  adharlabel.Font.Bold = True
+  phonelabel.Font.Bold = True
+  namelabel.Font.Bold = True
+  cv1.Columns.Count = 4
+  cv1.Header = 1 'show header 
+  cv1.Mode = Select.Single
+  cv1.Columns[0].Text = "Product" 
+  cv1.Columns[0].Width = 280
+  cv1.Columns[1].Text = "Quantity"
+  cv1.Columns[1].Width = 180
+  cv1.Columns[2].Text = "Rate (INR)" 
+  cv1.Columns[2].Width = 220
+  cv1.Columns[3].Text = "Amount"
+  cv1.Columns[3].Width = 220
+  cv1.Columns[0].Alignment = Align.Center
+  cv1.Columns[1].Alignment = Align.Center
+  cv1.Columns[2].Alignment = Align.Center
+  cv1.Columns[3].Alignment = Align.Center
+  
+End

@@ -1,10 +1,20 @@
 # Gambas Project File 3.0
 Title=Material Requirement Processing
-Startup=Main
+Startup=display
 Version=0.0.1
 Component=gb.image
 Component=gb.gui
 Component=gb.form
+Component=gb.chart
+Component=gb.data
+Component=gb.db
+Component=gb.db.form
+Component=gb.db.mysql
+Component=gb.db.odbc
+Component=gb.db.postgresql
+Component=gb.db.sqlite3
 TabSize=2
 Language=en_US
+ControlPublic=1
+ModulePublic=1
 Packager=1
