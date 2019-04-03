@@ -1,5 +1,6 @@
 ' Gambas class file
 
+Private qT As String = 0
 Public Sub Form_Open()
 
   nameans.Caption = Sale.a1
@@ -29,5 +30,19 @@ Public Sub Form_Open()
   cv1.Columns[1].Alignment = Align.Center
   cv1.Columns[2].Alignment = Align.Center
   cv1.Columns[3].Alignment = Align.Center
+  Dim i As Integer
+  For i = 0 To Sale.aT - 1 Step 1
+    cv1.Add(qT, Sale.Material[i])
+    cv1[qT][1] = Sale.Quantity[i]
+    cv1[qT][2] = Sale.RRate[i]
+    cv1[qT][3] = Sale.Amount[i]
+    Inc qT
+  Next
+  Label2.Caption = "Rs." & Str(Sale.am)
+End
+Public Sub form_Close()
+  
+  Sale.Show()
+  Sale.clr2()
   
 End

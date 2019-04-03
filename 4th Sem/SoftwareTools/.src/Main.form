@@ -2,6 +2,7 @@
 
 { Form Form
   MoveScaled(0,0,135,88)
+  Icon = Picture["shopping-cart-309592__340.png"]
   { Label1 Label
     MoveScaled(26,3,87,8)
     Font = Font["Century Schoolbook L,Bold,+8"]

@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,120,104)
+  MoveScaled(0,0,120,69)
   Background = &HC0C0C0&
   AutoResize = True
   { namelabel Label
@@ -41,10 +41,21 @@
     Foreground = Color.Black
   }
   { cv1 ColumnView
-    MoveScaled(2,13,113,78)
+    MoveScaled(2,13,113,44)
     Font = Font["Bold"]
     Background = &HC0C0C0&
     Foreground = Color.Black
     Expand = True
+  }
+  { Label1 Label
+    MoveScaled(37,61,54,4)
+    Font = Font["Bold,+3"]
+    Text = ("Net Amount Payable :")
+    Alignment = Align.Right
+  }
+  { Label2 Label
+    MoveScaled(92,61,22,4)
+    Font = Font["Bold,+3"]
+    Alignment = Align.Left
   }
 }

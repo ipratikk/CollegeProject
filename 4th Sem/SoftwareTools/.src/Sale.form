@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,113,100)
+  MoveScaled(0,0,107,100)
   { Label1 Label
     MoveScaled(-8,6,24,4)
     Alignment = Align.Right
@@ -10,26 +10,26 @@
     MoveScaled(17,6,41,4)
   }
   { Label2 Label
-    MoveScaled(52,11,24,4)
+    MoveScaled(47,11,24,4)
     Font = Font["Bold"]
     Alignment = Align.Right
   }
   { adharbox TextBox
-    MoveScaled(77,6,24,4)
+    MoveScaled(72,6,24,4)
   }
   { Label3 Label
     MoveScaled(-8,11,24,4)
     Alignment = Align.Right
   }
   { adbox TextBox
-    MoveScaled(17,11,50,4)
+    MoveScaled(17,11,41,4)
   }
   { Label4 Label
-    MoveScaled(52,6,24,4)
+    MoveScaled(47,6,24,4)
     Alignment = Align.Right
   }
   { phbox TextBox
-    MoveScaled(77,11,24,4)
+    MoveScaled(72,11,24,4)
   }
   { product ComboBox
     MoveScaled(10,24,30,4)
@@ -40,33 +40,31 @@
     Text = ("Oty")
   }
   { Button1 Button
-    MoveScaled(80,24,16,4)
+    MoveScaled(79,24,16,4)
     Text = ("Add")
   }
-  { Label5 Label
-    MoveScaled(54,24,11,4)
-    Text = ("Rate")
-    Alignment = Align.Center
-  }
-  { Label6 Label
-    MoveScaled(66,24,13,4)
-    Text = ("Amount")
-    Alignment = Align.Center
-  }
   { ProductsList ColumnView
-    MoveScaled(10,33,91,52)
+    MoveScaled(10,33,86,52)
     Sorted = True
     Editable = True
     Resizable = True
     AutoResize = False
   }
   { Button2 Button
-    MoveScaled(91,91,16,4)
+    MoveScaled(80,91,16,4)
     Text = ("Close")
   }
   { !Button3 Button
-    MoveScaled(73,91,16,4)
+    MoveScaled(62,91,16,4)
     #Public = True
     Text = ("Print")
+  }
+  { Button4 Button
+    MoveScaled(10,91,16,4)
+    Text = ("Clear")
+  }
+  { Button5 Button
+    MoveScaled(28,91,16,4)
+    Text = ("Reset")
   }
 }

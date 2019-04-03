@@ -1,7 +1,7 @@
 # Gambas Project File 3.0
 Title=Material Requirement Processing
-Startup=display
-Version=0.0.1
+Startup=Main
+Version=0.0.4
 Component=gb.image
 Component=gb.gui
 Component=gb.form

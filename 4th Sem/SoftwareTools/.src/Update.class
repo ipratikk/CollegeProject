@@ -1,6 +1,7 @@
 ' Gambas class file
 
-Static Private T As Integer = 0
+Private qT As Integer = 0
+Private aT As Integer = 0
 Private Val As String
 Public Material[100] As String
 Public Quantity[100] As Integer
@@ -14,20 +15,21 @@ Public Sub Button1_Click()
     Val = product.Text
     tmp = Check()
     If tmp = -1 Then
-      Material[T] = product.Text
-      Quantity[T] = Val(qty.Text)
-      RRate[T] = Val(rate.Text)
-      ProductsList.Add(T, product.Text)
-      ProductsList[T][1] = qty.Text
-      ProductsList[T][2] = rate.Text
-      Inc T
+      Material[aT] = product.Text
+      Quantity[aT] = Val(qty.Text)
+      RRate[aT] = Val(rate.Text)
+      ProductsList.Add(qT, product.Text)
+      ProductsList[qT][1] = qty.Text
+      ProductsList[qT][2] = rate.Text
+      Inc aT
+      Inc qT
     Else
       If RRate[tmp] == Val(rate.Text) Then
         Quantity[tmp] = Quantity[tmp] + Val(qty.Text)
-        ProductsList.Add(T, product.Text)
-        ProductsList[T][1] = qty.Text
-        ProductsList[T][2] = rate.Text
-        Inc T
+        ProductsList.Add(qT, product.Text)
+        ProductsList[qT][1] = qty.Text
+        ProductsList[qT][2] = rate.Text
+        Inc qT
       Else
         Message.Info("Different Rate for Different Quantity will be added later in future update", "Ok")
       Endif
@@ -40,8 +42,8 @@ Public Sub Check() As Integer
   Dim i, ind As Integer
   ind = -1
   
-  For i = 0 To Max(T, Main.top2) Step 1
-    If Comp(Material[i], Val) == 0 Then
+  For i = 0 To Max(aT, Main.LPTop) Step 1
+    If Comp(Main.Material[i], Val) == 0 Or Comp(Material[i], Val) == 0 Then
       Return i
     Endif
    Next
@@ -77,8 +79,8 @@ End
 Public Sub in()
   
   Dim i, k As Integer
-  For i = 0 To T Step 1
-    k = Main.Top2 + i
+  For i = 0 To aT - 1 Step 1
+    k = Main.LPTop + i
     Main.Material[k] = Material[i]
     Main.Rate[k] = RRate[i]
     Main.Quantity[k] = Quantity[i]
@@ -89,7 +91,7 @@ End
 Public Sub Button2_Click()
 
   in()
-  Main.Top2 += T
+  Main.LPTop += aT
   Update.Close(0)
   Main.Show()
 End
@@ -97,5 +99,11 @@ End
 Public Sub Button3_Click()
 
   ProductsList.Clear()
-  T = 0
+  qT = 0
+  aT = 0
+End
+Public Sub form_Close()
+  
+  Main.Show()
+  
 End
