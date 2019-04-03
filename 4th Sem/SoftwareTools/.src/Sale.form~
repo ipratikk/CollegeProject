@@ -39,7 +39,7 @@
   }
   { qty ComboBox
     MoveScaled(41,24,12,4)
-    Text = ("Qty")
+    Text = ("Oty")
   }
   { Button1 Button
     MoveScaled(79,24,16,4)

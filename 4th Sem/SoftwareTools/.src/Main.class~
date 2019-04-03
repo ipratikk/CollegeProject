@@ -1,6 +1,6 @@
 ' Gambas class file
 
-Static Public serial As Integer = 1
+Static Public serial As Integer = 0
 Public Material[100] As String
 Public Quantity[100] As Integer
 Public Rate[100] As Float

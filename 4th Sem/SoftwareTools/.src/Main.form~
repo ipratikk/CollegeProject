@@ -1,0 +1,28 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,135,88)
+  Icon = Picture["shopping-cart-309592__340.png"]
+  { Label1 Label
+    MoveScaled(26,3,87,8)
+    Font = Font["Century Schoolbook L,Bold,+8"]
+    Text = ("Material Requirement Processing ")
+    Alignment = Align.Center
+  }
+  { Button1 Button
+    MoveScaled(33,23,71,11)
+    Text = ("Sale")
+  }
+  { Button2 Button
+    MoveScaled(33,41,71,11)
+    Text = ("Stock Update")
+  }
+  { Button3 Button
+    MoveScaled(33,62,71,11)
+    Text = ("Stock Enquiry")
+  }
+  { Timer1 #Timer
+    #MoveScaled(122,78)
+    Delay = 100
+  }
+}

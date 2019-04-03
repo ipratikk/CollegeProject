@@ -46,6 +46,5 @@ Public Sub form_Close()
   
   Sale.Show()
   Sale.clr2()
-  Sale.init()
   Inc Main.serial
 End

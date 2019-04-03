@@ -1,0 +1,57 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,79,82)
+  { product TextBox
+    MoveScaled(4,5,30,4)
+    Expand = True
+  }
+  { Label2 Label
+    MoveScaled(5,1,28,4)
+    Expand = True
+    Text = ("Product Name")
+    Alignment = Align.Center
+  }
+  { ProductsList ColumnView
+    MoveScaled(4,14,71,52)
+    Expand = True
+    Sorted = True
+    Editable = True
+    AutoResize = False
+  }
+  { qty ComboBox
+    MoveScaled(35,5,12,4)
+    Expand = True
+  }
+  { Label1 Label
+    MoveScaled(36,1,11,4)
+    Expand = True
+    Text = ("Quantity")
+    Alignment = Align.Center
+  }
+  { Button3 Button
+    MoveScaled(40,73,16,4)
+    Expand = True
+    Text = ("Clear")
+  }
+  { Label5 Label
+    MoveScaled(48,1,11,4)
+    Expand = True
+    Text = ("Rate")
+    Alignment = Align.Center
+  }
+  { rate TextBox
+    MoveScaled(48,5,11,4)
+    Expand = True
+  }
+  { Button2 Button
+    MoveScaled(58,73,16,4)
+    Expand = True
+    Text = ("Submit")
+  }
+  { Button1 Button
+    MoveScaled(60,5,16,4)
+    Expand = True
+    Text = ("Add")
+  }
+}

@@ -59,15 +59,8 @@
     Alignment = Align.Left
   }
   { Label3 Label
-    MoveScaled(-14,2,24,4)
-    Foreground = Color.Black
+    MoveScaled(-13,2,24,4)
     Text = ("Bill No:")
     Alignment = Align.Right
-  }
-  { Label4 Label
-    MoveScaled(11,2,24,4)
-    Font = Font["Bold"]
-    Foreground = Color.Black
-    Alignment = Align.Left
   }
 }

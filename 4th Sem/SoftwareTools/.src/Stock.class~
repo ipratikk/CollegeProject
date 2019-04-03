@@ -1,0 +1,8 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  Stock.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+
+End

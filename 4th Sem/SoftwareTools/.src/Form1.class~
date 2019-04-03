@@ -1,0 +1,8 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  Form1.Background = Color.Reds
+
+End

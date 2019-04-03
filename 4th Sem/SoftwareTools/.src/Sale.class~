@@ -105,7 +105,7 @@ Public Sub Button3_Click()
   a3 = adbox.Text
   a4 = phbox.Text
   modify()
-  If qT == 0 Or namebox.Text = "" Or phbox.Text = "" Or adharbox.Text = "" Or adbox.Text = "" Then
+  If qT == 0 Then
     Message.Info("Cannot Print Empty Bill", "OK")
   Else
     display.Show()

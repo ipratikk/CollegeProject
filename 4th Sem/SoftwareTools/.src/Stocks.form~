@@ -27,7 +27,6 @@
   }
   { ComboBox1 ComboBox
     MoveScaled(23,16,24,4)
-    ReadOnly = True
   }
   { Button2 Button
     MoveScaled(68,16,16,4)

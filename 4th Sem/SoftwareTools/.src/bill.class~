@@ -1,0 +1,21 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  sno.Caption = "Serial No."
+  namelabel.Caption = "Name"
+  phlabel.Caption = "Phone"
+  addlabel.Caption = "Address"
+  adlabel.Caption = "Aadhar Number"
+  name.Caption = Sale.a1
+  adhar.Caption = Sale.a2
+  add.Caption = Sale.a3
+  ph.Caption = Sale.a4
+  sno.Font.Bold = True
+  snumber.Font.Bold = True
+  namelabel.Font.Bold = True
+  phlabel.Font.Bold = True
+  
+
+End

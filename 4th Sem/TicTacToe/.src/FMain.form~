@@ -1,0 +1,94 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,65,55)
+  Text = ("The Tic Tac Toe Game")
+  SkipTaskbar = True
+  { TextLabelTitle TextLabel
+    MoveScaled(6,2,25,9)
+    Font = Font["+5"]
+    Text = ("The Tic Tac Toe")
+  }
+  { TextLabelTitle2 TextLabel
+    MoveScaled(31,1,19,9)
+    Font = Font["+9"]
+    Foreground = Color.Red
+    Text = ("Game")
+  }
+  { Button1 Button
+    MoveScaled(6.125,10,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button2 Button
+    MoveScaled(6,23,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button3 Button
+    MoveScaled(6,36,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button4 Button
+    MoveScaled(19,10,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button5 Button
+    MoveScaled(19,23,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button6 Button
+    MoveScaled(19,36,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button7 Button
+    MoveScaled(32,10,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button8 Button
+    MoveScaled(32,23,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { Button9 Button
+    MoveScaled(32,36,12.5,12.5)
+    Font = Font["+12"]
+    Text = (" ")
+  }
+  { PictureBox1 PictureBox
+    MoveScaled(49,1,9,9)
+    Picture = Picture["Assets/Images/icon.jpg"]
+    Stretch = True
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(46,14,6,4)
+    Text = ("Turn:")
+  }
+  { TurnLabel TextLabel
+    MoveScaled(53,13,3,3)
+    Font = Font["+3"]
+    Text = (" ")
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(46,19,9,3)
+    Text = ("Winner:")
+  }
+  { WinnerLabel TextLabel
+    MoveScaled(54,18,7,3)
+    Font = Font["+3"]
+    Text = (" ")
+  }
+  { ResetButton Button
+    MoveScaled(48,32,13,7)
+    Text = ("Reset Button")
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(36,51,25,2)
+    Text = ("By Vladwoguer Bezerra")
+  }
+}

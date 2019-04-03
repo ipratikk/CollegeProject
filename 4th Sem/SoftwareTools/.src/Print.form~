@@ -1,0 +1,43 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,140,104)
+  { Label1 Label
+    MoveScaled(4,3,24,4)
+    Text = ("Serial No :")
+  }
+  { Label2 Label
+    MoveScaled(14,3,24,4)
+  }
+  { Label3 Label
+    MoveScaled(-14,9,24,4)
+    Text = ("Name")
+    Alignment = Align.Right
+  }
+  { Label4 Label
+    MoveScaled(46,14,24,4)
+    Font = Font["Bold"]
+    Alignment = Align.Right
+  }
+  { Label5 Label
+    MoveScaled(-14,14,24,4)
+    Alignment = Align.Right
+  }
+  { Label6 Label
+    MoveScaled(46,9,24,4)
+    Text = ("Aa")
+    Alignment = Align.Right
+  }
+  { name Label
+    MoveScaled(11,9,41,4)
+  }
+  { add Label
+    MoveScaled(11,14,50,4)
+  }
+  { adhar Label
+    MoveScaled(71,9,24,4)
+  }
+  { ph Label
+    MoveScaled(71,14,24,4)
+  }
+}

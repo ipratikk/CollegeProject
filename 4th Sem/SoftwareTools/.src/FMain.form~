@@ -1,0 +1,27 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,168,103)
+  { Label1 Label
+    MoveScaled(44,3,87,8)
+    Font = Font["Century Schoolbook L,Bold,+8"]
+    Text = ("Material Requirement Processing ")
+  }
+  { Button1 Button
+    MoveScaled(46,23,71,11)
+    AutoResize = True
+    Text = ("Sale")
+  }
+  { Button2 Button
+    MoveScaled(46,41,71,11)
+    Text = ("Purchase")
+  }
+  { Button3 Button
+    MoveScaled(46,62,71,11)
+    Text = ("Stock Enquiry")
+  }
+  { Timer1 #Timer
+    #MoveScaled(140,78)
+    Delay = 100
+  }
+}

@@ -1,0 +1,114 @@
+' Gambas class file
+
+Private qT As Integer = 0
+Private aT As Integer = 0
+Private Val As String
+Public Material[100] As String
+Public Quantity[100] As Integer
+Public RRate[100] As Float
+
+Public Sub Button1_Click()
+  Dim tmp As Integer
+  If product.Text = "" Or qty.Text = "" Or rate.Text = "" Then
+    Message.Info("Invalid Entry", "OK")
+  Else
+    Val = product.Text
+    tmp = Check()
+    If tmp = -1 Then
+      Material[aT] = product.Text
+      Quantity[aT] = Val(qty.Text)
+      RRate[aT] = Val(rate.Text)
+      ProductsList.Add(qT, product.Text)
+      ProductsList[qT][1] = qty.Text
+      ProductsList[qT][2] = rate.Text
+      Inc aT
+      Inc qT
+    Else
+      If RRate[tmp] == Val(rate.Text) Then
+        Quantity[tmp] = Quantity[tmp] + Val(qty.Text)
+        ProductsList.Add(qT, product.Text)
+        ProductsList[qT][1] = qty.Text
+        ProductsList[qT][2] = rate.Text
+        Inc qT
+      Else
+        Message.Info("Different Rate for Different Quantity will be added later in future update", "Ok")
+      Endif
+    Endif
+  Endif
+End
+
+Public Sub Check() As Integer
+  
+  Dim i, ind As Integer
+  ind = -1
+  
+  For i = 0 To Max(aT, Main.LPTop) Step 1
+    If Comp(Main.Material[i], Val) == 0 Or Comp(Material[i], Val) == 0 Then
+      Return i
+    Endif
+   Next
+  Return ind
+End
+
+Public Sub Form_Open()
+  
+  Update.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+  Label1.Font.Bold = True
+  Label2.Font.Bold = True
+  Label5.Font.Bold = True
+  init()
+  ProductsList.Columns.Count = 3
+  ProductsList.Header = 1 'show header 
+  ProductsList.Mode = Select.Single
+  ProductsList.Columns[0].Text = "Product" 
+  ProductsList.Columns[0].Width = 240
+  ProductsList.Columns[1].Text = "Quantity"
+  ProductsList.Columns[1].Width = 155
+  ProductsList.Columns[2].Text = "Rate (INR)" 
+  ProductsList.Columns[0].Alignment = Align.Center
+  ProductsList.Columns[1].Alignment = Align.Center
+  ProductsList.Columns[2].Alignment = Align.Center
+End
+Public Sub init()
+  
+  For i As Integer = 0 To 10
+    qty.Add(Str(i))
+  Next
+  
+End
+Public Sub in()
+  
+  Dim i, k As Integer
+  For i = 0 To aT - 1 Step 1
+    k = Main.LPTop + i
+    Main.Material[k] = Material[i]
+    Main.Rate[k] = RRate[i]
+    Main.Quantity[k] = Quantity[i]
+  Next
+  
+End
+
+Public Sub Button2_Click()
+
+  in()
+  Main.LPTop += aT
+  Update.Close(0)
+  Main.Show()
+End
+
+Public Sub Button3_Click()
+
+  ProductsList.Clear()
+  qT = 0
+  aT = 0
+End
+Public Sub form_Close()
+  
+  Main.Show()
+  
+End
+Public Sub form_Resize()
+  
+  Update.ResizeScaled(200, 250)
+  
+End
