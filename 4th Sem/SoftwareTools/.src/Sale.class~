@@ -74,7 +74,7 @@ End
 Public Sub Button1_Click()
   Dim i As Integer
   Dim tmp As Float
-  If qty.Text = "Qty" Or qty.Text = "" Then
+  If check2() == 0 Then
     Message.Info("Invalid Entry", "OK")
   Else
     i = find()
@@ -97,6 +97,15 @@ Public Sub Button1_Click()
     Endif
   Endif
 End
+Public Sub check2() As Integer
+  
+  Dim tmp As String
+  tmp = Val(qty.Text)
+  If tmp <> Null Then
+    Return 1
+  Endif
+  Return 0
+End
 
 Public Sub Button3_Click()
 
@@ -105,12 +114,16 @@ Public Sub Button3_Click()
   a3 = adbox.Text
   a4 = phbox.Text
   modify()
-  If qT == 0 Then
+  If qT == 0 Or namebox.Text = "" Or phbox.Text = "" Or adharbox.Text = "" Or adbox.Text = "" Then
     Message.Info("Cannot Print Empty Bill", "OK")
   Else
-    display.Show()
-  Sale.Hide()
-  clr()
+    If Val(phbox.Text) <> Null Or Val(adharbox.Text) <> Null Then
+      display.Show()
+      Sale.Hide()
+      clr()
+    Else
+      Message.Info("Enter valid details", "OK")
+    Endif
   Endif
 End
 

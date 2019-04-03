@@ -1,0 +1,13 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,33,28)
+  { Button1 Button
+    MoveScaled(5,7,22,4)
+    Text = ("Add New Product")
+  }
+  { Button2 Button
+    MoveScaled(5,16,22.5,4)
+    Text = ("Add Quantity (Existing)")
+  }
+}

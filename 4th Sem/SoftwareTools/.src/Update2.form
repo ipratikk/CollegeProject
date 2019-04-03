@@ -1,0 +1,26 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,60,19)
+  { cb1 ComboBox
+    MoveScaled(1,6,24,4)
+    ReadOnly = True
+  }
+  { Button1 Button
+    MoveScaled(41,6,16,4)
+    Text = ("Add")
+  }
+  { qty TextBox
+    MoveScaled(28,6,10,4)
+  }
+  { Label1 Label
+    MoveScaled(1,1,24,4)
+    Text = ("Product")
+    Alignment = Align.Center
+  }
+  { Label2 Label
+    MoveScaled(28,1,10,4)
+    Text = ("Quantity")
+    Alignment = Align.Center
+  }
+}

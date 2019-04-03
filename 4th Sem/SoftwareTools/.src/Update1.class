@@ -1,0 +1,128 @@
+' Gambas class file
+
+Private qT As Integer = 0
+Private aT As Integer = 0
+Private mat As String
+Public Material[100] As String
+Public Quantity[100] As Integer
+Public RRate[100] As Float
+
+Public Sub Button1_Click()
+  Dim tmp As Integer
+  If product.Text = "" Or check2() == 0 Then
+    Message.Info("Invalid Entry", "OK")
+  Else
+    mat = product.Text
+    If checkmain() == 1 Then
+      Message.Info("Please use the other form for this product", "OK")
+    Else
+      tmp = Check()
+      If tmp = -1 Then
+        Material[aT] = product.Text
+        Quantity[aT] = Val(qty.Text)
+        RRate[aT] = Val(rate.Text)
+        ProductsList.Add(qT, product.Text)
+        ProductsList[qT][1] = qty.Text
+        ProductsList[qT][2] = rate.Text
+        Inc aT
+        Inc qT
+      Else
+        If RRate[tmp] == Val(rate.Text) Then
+          Quantity[tmp] = Quantity[tmp] + Val(qty.Text)
+          ProductsList.Add(qT, product.Text)
+          ProductsList[qT][1] = qty.Text
+          ProductsList[qT][2] = rate.Text
+          Inc qT
+        Else
+          Message.Info("Different Rate for Different Quantity will be added later in future update", "Ok")
+        Endif
+      Endif
+    Endif
+  Endif
+End
+Public Sub check2() As Integer
+  
+  If Val(qty.Text) <> Null And Val(rate.Text) <> Null Then
+    Return 1
+  Endif
+  Return 0
+End
+Public Sub checkmain() As Integer
+  
+  For i As Integer = 0 To Main.LPTop Step 1
+    If Comp(mat, Main.Material[i]) == 0 Then
+      Return 1
+    Endif
+  Next
+  Return -1
+End
+
+Public Sub Check() As Integer
+  
+  Dim i As Integer
+  For i = 0 To aT Step 1
+    If Comp(Material[i], mat) == 0 Then
+      Return i
+    Endif
+   Next
+  Return -1
+End
+
+Public Sub Form_Open()
+  
+  updateselect.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+  Label1.Font.Bold = True
+  Label2.Font.Bold = True
+  Label5.Font.Bold = True
+  init()
+  ProductsList.Columns.Count = 3
+  ProductsList.Header = 1 'show header 
+  ProductsList.Mode = Select.Single
+  ProductsList.Columns[0].Text = "Product" 
+  ProductsList.Columns[0].Width = 240
+  ProductsList.Columns[1].Text = "Quantity"
+  ProductsList.Columns[1].Width = 155
+  ProductsList.Columns[2].Text = "Rate (INR)" 
+  ProductsList.Columns[0].Alignment = Align.Center
+  ProductsList.Columns[1].Alignment = Align.Center
+  ProductsList.Columns[2].Alignment = Align.Center
+End
+Public Sub init()
+  
+  For i As Integer = 0 To 20
+    qty.Add(Str(i))
+  Next
+  
+End
+Public Sub in()
+  
+  Dim i, k As Integer
+  For i = 0 To aT - 1 Step 1
+    k = Main.LPTop + i
+    Main.Material[k] = Material[i]
+    Main.Rate[k] = RRate[i]
+    Main.Quantity[k] = Quantity[i]
+  Next
+  
+End
+
+Public Sub Button2_Click()
+
+  in()
+  Main.LPTop += aT
+  Update1.Close(0)
+  Main.Show()
+End
+
+Public Sub Button3_Click()
+
+  ProductsList.Clear()
+  qT = 0
+  aT = 0
+  
+End
+Public Sub form_Close()
+  
+  updateselect.Show()
+  
+End

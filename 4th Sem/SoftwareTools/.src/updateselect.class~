@@ -1,0 +1,26 @@
+' Gambas class file
+
+
+Public Sub Button1_Click()
+
+  Update1.Show()
+  
+
+End
+
+Public Sub Button2_Click()
+
+  Update2.Show()
+
+End
+
+Public Sub Form_Open()
+
+  updateselect.Background = Color.Gradient(Color.Blue, Color.White, 0.75)
+
+End
+Public Sub Form_Close()
+  
+  Main.Show()
+  
+End

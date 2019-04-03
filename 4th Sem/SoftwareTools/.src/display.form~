@@ -59,8 +59,20 @@
     Alignment = Align.Left
   }
   { Label3 Label
-    MoveScaled(-13,2,24,4)
+    MoveScaled(-14,2,24,4)
+    Foreground = Color.Black
     Text = ("Bill No:")
     Alignment = Align.Right
+  }
+  { Label4 Label
+    MoveScaled(11,2,24,4)
+    Font = Font["Bold"]
+    Foreground = Color.Black
+    Alignment = Align.Left
+  }
+  { PictureBox1 PictureBox
+    MoveScaled(-5,54,47,16)
+    Picture = Picture["imageedit_1_6285254385.png"]
+    Stretch = True
   }
 }

@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,120,70)
+  MoveScaled(0,0,120,82)
   Background = &HC0C0C0&
   AutoResize = True
   { namelabel Label
@@ -69,5 +69,22 @@
     Font = Font["Bold"]
     Foreground = Color.Black
     Alignment = Align.Left
+  }
+  { PictureBox1 PictureBox
+    MoveScaled(2,68,24,7)
+    Picture = Picture["signature5ca4c5e65a951.png"]
+    Stretch = True
+  }
+  { PictureBox2 PictureBox
+    MoveScaled(28,69,22,6)
+    Picture = Picture["signature5ca4c61e10533.png"]
+    Stretch = True
+  }
+  { Label5 Label
+    MoveScaled(12,76,24,4)
+    Font = Font["Bold,+1"]
+    Foreground = Color.Black
+    Text = ("Authorized Signatory")
+    Alignment = Align.Center
   }
 }

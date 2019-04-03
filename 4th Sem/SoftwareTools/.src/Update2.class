@@ -17,7 +17,7 @@ Public Sub Button1_Click()
     For i As Integer = 0 To Main.LPTop Step 1
       If Comp(Main.Material[i], cb1.Text) == 0 Then
         Main.Quantity[i] += Val(qty.Text)
-        Message.Info("Added Successfully")
+        Message.Info("Added Successfully", "OK")
       Endif
     Next
   Endif
