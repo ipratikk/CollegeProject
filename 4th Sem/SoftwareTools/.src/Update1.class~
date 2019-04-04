@@ -123,6 +123,6 @@ Public Sub Button3_Click()
 End
 Public Sub form_Close()
   
-  Main.Show()
+  updateselect.Show()
   
 End

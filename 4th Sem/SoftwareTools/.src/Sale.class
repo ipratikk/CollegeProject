@@ -117,6 +117,7 @@ Public Sub Button3_Click()
     Message.Info("Cannot Print Empty Bill", "OK")
   Else
     If Val(phbox.Text) <> Null And Val(adharbox.Text) <> Null Then
+      modify()
       display.Show()
       Sale.Hide()
       clr()

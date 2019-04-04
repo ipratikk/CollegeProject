@@ -21,6 +21,6 @@ Public Sub Form_Open()
 End
 Public Sub Form_Close()
   
-  updateselect.Show()
+  Main.Show()
   
 End

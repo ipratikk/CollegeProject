@@ -111,7 +111,7 @@ Public Sub Button2_Click()
   in()
   Main.LPTop += aT
   Update1.Close(0)
-  Main.Show()
+  updateselect.Show()
 End
 
 Public Sub Button3_Click()

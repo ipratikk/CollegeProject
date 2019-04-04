@@ -50,3 +50,9 @@ Public Sub Button3_Click()
   Main.Hide()
 
 End
+Public Sub form_Close()
+
+  Main.Hide()
+  Message("Thank You")
+  
+End

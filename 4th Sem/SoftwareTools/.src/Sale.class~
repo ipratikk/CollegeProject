@@ -113,12 +113,11 @@ Public Sub Button3_Click()
   a2 = adharbox.Text
   a3 = adbox.Text
   a4 = phbox.Text
-  modify()
   If qT == 0 Or namebox.Text = "" Or phbox.Text = "" Or adharbox.Text = "" Or adbox.Text = "" Then
     Message.Info("Cannot Print Empty Bill", "OK")
   Else
-    If Val(phbox.Text) <> Null Or Val(adharbox.Text) <> Null Then
-      display.Show()
+    If Val(phbox.Text) <> Null And Val(adharbox.Text) <> Null Then
+      modify()display.Show()
       Sale.Hide()
       clr()
     Else

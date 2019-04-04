@@ -38,7 +38,7 @@ End
 
 Public Sub Button2_Click()
 
-  Update.Show()
+  updateselect.Show()
   Main.Hide()
 
 End
@@ -49,4 +49,9 @@ Public Sub Button3_Click()
   Stocks.Show()
   Main.Hide()
 
+End
+Public Sub form_Close()
+
+  Message("Thank You")
+  
 End

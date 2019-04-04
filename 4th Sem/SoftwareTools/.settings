@@ -11,16 +11,20 @@ Path="MaterialRequirementProcessing.gambas"
 LastCommit="changed forms"
 
 [OpenFile]
-Active=6
+Active=12
 File[1]=".src/display.form"
-Count=8
+Count=12
 File[2]=".src/Main.form"
 File[3]=".src/Sale.form"
 File[4]=".src/Stocks.form"
-File[5]=".src/Update.form"
-File[6]=".src/Sale.class:8.27"
-File[7]=".src/Main.class:35.2"
-File[8]=".src/display.class:13.48"
+File[5]=".src/Sale.class:26.109"
+File[6]=".src/Main.class:19.20"
+File[7]=".src/display.class:13.48"
+File[8]=".src/updateselect.form"
+File[9]=".src/updateselect.class:3.8"
+File[10]=".src/Update1.form"
+File[11]=".src/Update2.form"
+File[12]=".src/Update1.class:28.91"
 
 [Watches]
 Count=0
