@@ -88,7 +88,7 @@
   }
   { TextLabel3 TextLabel
     MoveScaled(36,51,25,2)
-    Text = ("By Priyam Adak")
+    Text = ("By Pratik Goel")
     Alignment = Align.Center
   }
 }
