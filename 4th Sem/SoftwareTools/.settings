@@ -11,7 +11,7 @@ Path="MaterialRequirementProcessing.gambas"
 LastCommit="changed forms"
 
 [OpenFile]
-Active=12
+Active=6
 File[1]=".src/display.form"
 Count=12
 File[2]=".src/Main.form"
@@ -24,7 +24,7 @@ File[8]=".src/updateselect.form"
 File[9]=".src/updateselect.class:3.8"
 File[10]=".src/Update1.form"
 File[11]=".src/Update2.form"
-File[12]=".src/Update1.class:28.91"
+File[12]=".src/Update1.class:39.78"
 
 [Watches]
 Count=0

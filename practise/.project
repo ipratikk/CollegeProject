@@ -1,0 +1,12 @@
+# Gambas Project File 3.0
+Title=xyz
+Startup=FMain
+Version=0.0.1
+Component=gb.image
+Component=gb.gui
+Component=gb.form
+TabSize=2
+Language=en_US
+ControlPublic=1
+ModulePublic=1
+Packager=1

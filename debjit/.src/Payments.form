@@ -1,0 +1,124 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,143,101)
+  Background = &H5FAFFF&
+  Resizable = False
+  { Label1 Label
+    MoveScaled(11,22,24,4)
+    Text = ("Customer Name :- ")
+  }
+  { Label2 Label
+    MoveScaled(11,31,24,4)
+    Text = ("Contact No :- ")
+  }
+  { Label3 Label
+    MoveScaled(7,8,56,4)
+    Font = Font["+5"]
+    Background = Color.Foreground
+    Foreground = Color.ButtonBackground
+    Text = ("               Payment Confirmation")
+  }
+  { Label4 Label
+    MoveScaled(11,39,24,4)
+    Text = ("Billing Address:-")
+  }
+  { Label5 Label
+    MoveScaled(11,51,24,4)
+    Text = ("Mode of payment:-")
+  }
+  { TextArea1 TextArea
+    MoveScaled(35,39,24,5)
+  }
+  { TextBox1 TextBox
+    MoveScaled(35,22,24,4)
+  }
+  { TextBox2 TextBox
+    MoveScaled(35,31,24,4)
+  }
+  { cb1 ComboBox
+    MoveScaled(35,50,24,4)
+    Text = ("--None--")
+  }
+  { Button1 Button
+    MoveScaled(57,91,22,5)
+    Text = ("Confirm")
+  }
+  { Label6 Label
+    MoveScaled(75,8,56,4)
+    Font = Font["+5"]
+    Background = Color.Foreground
+    Foreground = Color.ButtonBackground
+    Text = ("                        Order details")
+  }
+  { Label7 Label
+    MoveScaled(70,22,24,4)
+    Text = ("Product Name :-")
+  }
+  { Label8 Label
+    MoveScaled(70,31,24,4)
+    Text = ("Price per Unit:- ")
+  }
+  { Label9 Label
+    MoveScaled(70,40,24,4)
+    Text = ("Units :- ")
+  }
+  { TextBox3 TextBox
+    MoveScaled(102,22,24,4)
+    ReadOnly = True
+  }
+  { TextBox4 TextBox
+    MoveScaled(102,31,24,4)
+    ReadOnly = True
+  }
+  { Label10 Label
+    MoveScaled(70,49,24,4)
+    Text = ("Total Amount to be paid:-")
+  }
+  { TextBox5 TextBox
+    MoveScaled(102,49,24,4)
+    ReadOnly = True
+  }
+  { Button2 Button
+    MoveScaled(93,60,24,4)
+    Text = ("Calculate Grand Total")
+  }
+  { Button3 Button
+    MoveScaled(8,91,16,4)
+    Text = ("Go Back")
+  }
+  { TextBox6 TextBox
+    MoveScaled(107,39,14,4)
+  }
+  { Button4 Button
+    MoveScaled(122,39,4,4)
+    Text = ("+")
+  }
+  { Button5 Button
+    MoveScaled(102,39,4,4)
+    Text = ("-")
+  }
+  { Label11 Label
+    MoveScaled(10,60,24,4)
+    Text = ("Card Number :- ")
+  }
+  { Label12 Label
+    MoveScaled(10,69,24,4)
+    Text = ("CVV")
+  }
+  { TextBox7 TextBox
+    MoveScaled(35,60,24,4)
+  }
+  { TextBox8 TextBox
+    MoveScaled(35,69,24,4)
+    Password = True
+  }
+  { Label13 Label
+    MoveScaled(9,78,24,4)
+    Text = ("Expiration date:- ")
+  }
+  { TextBox9 TextBox
+    MoveScaled(35,78,24,4)
+    Password = True
+  }
+}

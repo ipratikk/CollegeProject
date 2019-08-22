@@ -1,0 +1,43 @@
+' Gambas class file
+
+
+
+Public Sub Button1_Click()
+
+  If TextBox1.Text = "admin" And TextBox2.Text = "root" Then
+    Login.Close(0)
+    Adminform.Show
+  Else If TextBox1.Text = "user" And TextBox2.Text = "@user" Then
+    Login.Close(0)
+    Us_er.Show
+  Else
+    Message("Wrong Username or Password!!!!")
+    TextBox1.Text = ""
+    TextBox2.Text = ""
+  Endif
+
+
+End
+ 
+
+Public Sub Button2_Click()
+
+  Login.Close(0)
+
+End
+
+Public Sub TextBox1_KeyRelease()
+
+  If TextBox1.Length > 0 Then
+    Button1.Enabled = True
+  Else
+    Button1.Enabled = False
+  Endif
+
+End
+
+Public Sub Form_Open()
+
+  Button1.Enabled = False
+
+End

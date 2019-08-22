@@ -1,0 +1,51 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,76,56)
+  { Button1 Button
+    MoveScaled(30,12,16,4)
+    Text = ("Red")
+  }
+  { Button2 Button
+    MoveScaled(30,22,16,4)
+    Text = ("Blue")
+  }
+  { Button3 Button
+    MoveScaled(30,33,16,4)
+    Text = ("Green")
+  }
+  { Button4 Button
+    MoveScaled(30,44,16,4)
+    Text = ("Random")
+  }
+  { Button5 Button
+    MoveScaled(30,4,16,4)
+    Text = ("Auto")
+  }
+  { Timer1 #Timer
+    #MoveScaled(57,5)
+  }
+  { LCDLabel1 LCDLabel
+    MoveScaled(2,5,24,4)
+  }
+  { Timer2 #Timer
+    #MoveScaled(59,23)
+  }
+  { Label1 Label
+    MoveScaled(2,14,24,4)
+  }
+  { tb TextBox
+    MoveScaled(2,22,24,4)
+  }
+  { Button6 Button
+    MoveScaled(2,28,16,4)
+    Text = ("submit")
+  }
+  { Label2 Label
+    MoveScaled(2,34,24,4)
+  }
+  { Button7 Button
+    MoveScaled(3,45,16,4)
+    Text = ("exit")
+  }
+}

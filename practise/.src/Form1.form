@@ -1,0 +1,15 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,64,64)
+  { lb Label
+    MoveScaled(7,6,24,4)
+  }
+  { Label2 Label
+    MoveScaled(7,14,24,4)
+  }
+  { Button1 Button
+    MoveScaled(16,23,16,4)
+    Text = ("Close")
+  }
+}

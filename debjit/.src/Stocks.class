@@ -1,0 +1,77 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+
+  Dim c As Integer = 0
+  Stocks.b1.Enabled = False
+  Stocks.Button3.Enabled = False
+  For c = 0 To (Adminform.productName.Length - 1)
+    Stocks.ListBox1.Add(Adminform.productName[c])
+  Next
+ End
+
+Public Sub ListBox1_Click()
+
+  If Stocks.ListBox1.Count > 0 Then
+    b1.Enabled = True
+    Button3.Enabled = True
+  Else
+    b1.Enabled = False
+    Button3.Enabled = False
+  Endif
+End
+
+Public Sub b1_Click()
+
+   Dim index As Integer
+   Dim s As String
+   Dim n As Integer
+   If ListBox1.Count == 0 Then
+     b1.Enabled = False
+   Else
+      index = Stocks.ListBox1.Index
+      s = InputBox("Enter the number of " & Adminform.productName[index] & " you want to delete : - ")   
+      n = s
+      If n == Adminform.productQuantity[index] Then
+        ListBox1.Remove(index)
+        Adminform.productName.Remove(index)
+        Adminform.productQuantity.Remove(index)
+        Adminform.productPricepu.Remove(index)
+        Message("You have successfully removed an item!!!")
+      Else
+        If n < Adminform.productQuantity[index] Then
+          Adminform.productQuantity[index] = Adminform.productQuantity[index] - n
+          Message("You have successfully removed some items!")
+        Else
+          Message("You do not  have sufficient items for removal!!!!Please select lesser no of items to delete.")
+        Endif
+      Endif
+       Stocks.TextBox1.Text = ""
+       Stocks.TextBox2.Text = ""
+      Stocks.TextBox3.Text = ""
+      b1.Enabled = False
+    Button3.Enabled = False
+     Endif
+  End
+
+Public Sub Button2_Click()
+
+  Stocks.Close(0)
+  Adminform.Show
+
+End
+
+Public Sub Button3_Click()
+
+  Dim index As Integer 
+  If ListBox1.Count <= 0 And Adminform.productQuantity.Count == 0 Then
+    Message("No items are left in your shop")
+  Else
+    index = ListBox1.Index
+    Stocks.TextBox1.Text = Adminform.productName[index]
+    Stocks.TextBox2.Text = Adminform.productQuantity[index]
+    Stocks.TextBox3.Text = Adminform.productPricepu[index]
+  Endif
+
+End

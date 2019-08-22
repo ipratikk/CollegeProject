@@ -1,0 +1,48 @@
+' Gambas class file
+
+Static Public productName As String[] = ["Redmi Note 7 Pro 64 GB 4 Gb RAM", "Philips Trimmer", "Sony Playstation 4 Pro 2 TB", "Colgate Toothbrush"]
+Static Public productQuantity As Integer[] = [500, 250, 100, 50]
+Static Public productPricepu As Integer[] = [17000, 850, 32000, 50]
+Static Public iPN As Integer = 0
+Static Public iQ As Integer = 0
+Static Public iPPU As Integer = 0
+
+Public Sub Button1_Click()
+
+  Login.Show
+  Message("You have successfully logged out from Online Shopping. Thank you!!!")
+  Adminform.Close(0)
+
+End
+
+
+
+Public Sub Button2_Click()
+
+  Dim pName As String
+  Dim quantity As String
+  Dim ppu As String
+  
+  pName = Adminform.TextBox1.Text
+  quantity = Adminform.TextBox2.Text
+  ppu = Adminform.TextBox3.Text
+  productName.Add(pName)
+  Adminform.TextBox1.Text = ""
+  iPN = iPN + 1
+  productQuantity.Add(quantity)
+  Adminform.TextBox2.Text = ""
+  iQ = iQ + 1
+  productPricepu.Add(ppu)
+  Adminform.TextBox3.Text = ""
+  iPPU = iPPU + 1
+End
+
+Public Sub Button3_Click()
+
+  Adminform.Close(0)
+  Stocks.Show
+
+End
+
+
+

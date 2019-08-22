@@ -1,0 +1,83 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,162,99)
+  Background = &H5FAFFF&
+  { Label1 Label
+    MoveScaled(32,15,34,7)
+    Text = ("Billing Information")
+  }
+  { Label2 Label
+    MoveScaled(14,26,23,4)
+    Text = ("Billed to:-")
+  }
+  { Label3 Label
+    MoveScaled(14,33,24,4)
+    Text = ("Contact No:-")
+  }
+  { Label4 Label
+    MoveScaled(14,40,23,4)
+    Text = ("Shipping Address:-")
+  }
+  { Label5 Label
+    MoveScaled(14,60,24,4)
+    Text = ("Mode of Payment:-")
+  }
+  { Label9 Label
+    MoveScaled(102,17,28,5)
+    Text = ("Product information")
+  }
+  { Label10 Label
+    MoveScaled(83,28,20,5)
+    Text = ("Product name:-")
+  }
+  { Label11 Label
+    MoveScaled(83,36,21,5)
+    Text = ("Units Purchased:-")
+  }
+  { Label12 Label
+    MoveScaled(83,43,18,5)
+    Text = ("cost per unit:-")
+  }
+  { Label13 Label
+    MoveScaled(39,78,24,5)
+    Text = ("Total Amount Paid :- ")
+  }
+  { Button1 Button
+    MoveScaled(62,89,20,5)
+    Text = ("Print")
+  }
+  { tb1 TextBox
+    MoveScaled(38,26,24,4)
+  }
+  { TextBox2 TextBox
+    MoveScaled(38,33,24,4)
+  }
+  { TextBox4 TextBox
+    MoveScaled(38,60,24,4)
+  }
+  { TextBox5 TextBox
+    MoveScaled(109,29,24,4)
+  }
+  { TextBox6 TextBox
+    MoveScaled(109,37,24,4)
+  }
+  { TextBox7 TextBox
+    MoveScaled(109,44,24,4)
+  }
+  { TextBox8 TextBox
+    MoveScaled(65,79,24,4)
+  }
+  { Button2 Button
+    MoveScaled(34,89,20,5)
+    Text = ("Exit")
+  }
+  { TextArea1 TextArea
+    MoveScaled(39,40,30,16)
+    ReadOnly = True
+  }
+  { Label6 Label
+    MoveScaled(40,5,71,5)
+    Text = ("                                                         Computer Generated Receipt")
+  }
+}

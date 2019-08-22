@@ -1,0 +1,33 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,151,92)
+  Background = &H5FAFFF&
+  Resizable = False
+  Margin = True
+  Padding = 20
+  { lb1 ListBox
+    MoveScaled(25,11,105,44)
+    Background = Color.LightGray
+    ScrollBar = Scroll.Both
+  }
+  { Label1 Label
+    MoveScaled(34,3,80,4)
+    Font = Font["+5"]
+    Background = Color.Foreground
+    Foreground = Color.ButtonBackground
+    Text = ("                               List of Available Products ")
+  }
+  { Button2 Button
+    MoveScaled(51,62,18,4)
+    Background = Color.DarkCyan
+    Foreground = Color.Cyan
+    Text = ("LOGOUT")
+  }
+  { Button3 Button
+    MoveScaled(90,62,22,4)
+    Background = Color.DarkCyan
+    Foreground = Color.Cyan
+    Text = ("Buy Now ")
+  }
+}

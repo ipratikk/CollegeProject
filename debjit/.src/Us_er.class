@@ -1,0 +1,42 @@
+' Gambas class file
+
+' Gambas clas
+
+Static Public ind As Integer = 0
+Public Sub Button2_Click()
+
+  Us_er.Close(0)
+  Message("You have sucessfully logged out!!!! Thank you!!!")
+  Login.Show
+
+End
+
+Public Sub Form_Open()
+
+  Us_er.lb1.Clear
+  Dim c As Integer
+  Us_er.Button3.Enabled = False
+  For c = 0 To (Adminform.productName.Length - 1)
+    Us_er.lb1.Add(Adminform.productName[c])
+  Next
+End
+
+Public Sub Button3_Click()
+
+  Us_er.Close(0)
+  Payments.Show
+
+End
+
+Public Sub lb1_Click()
+
+  If Us_er.lb1.Index >= 0 Then
+    Us_er.Button2.Enabled = True
+    Us_er.Button3.Enabled = True
+  Else
+    Us_er.Button2.Enabled = False
+    Us_er.Button3.Enabled = False
+  Endif
+  ind = Us_er.lb1.Index
+
+End

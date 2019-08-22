@@ -1,0 +1,31 @@
+' Gambas class file
+
+
+
+Public Sub Button1_Click()
+
+  receipt.tb1.Text = Payments.TextBox1.Text
+  receipt.TextBox2.Text = Payments.TextBox2.Text
+  receipt.Textarea1.Text = Payments.TextArea1.Text
+  receipt.TextBox4.Text = Payments.cb1.Text
+  receipt.Textbox5.Text = Payments.TextBox3.Text
+  receipt.TextBox6.Text = Payments.TextBox6.Text
+  receipt.TextBox7.Text = Payments.TextBox4.Text
+  receipt.TextBox8.Text = Payments.TextBox5.Text
+
+End
+
+Public Sub Button2_Click()
+
+  receipt.Close(0)
+  Payments.Close(0)
+  Us_er.Show
+  
+
+End
+
+Public Sub Form_Open()
+
+  
+
+End

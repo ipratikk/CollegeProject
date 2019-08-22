@@ -1,0 +1,60 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,137,93)
+  Background = &H5FAFFF&
+  { ListBox1 ListBox
+    MoveScaled(17,11,105,31)
+    Background = Color.LightGray
+  }
+  { Label1 Label
+    MoveScaled(26,3,80,4)
+    Font = Font["+5"]
+    Background = Color.Foreground
+    Foreground = Color.ButtonBackground
+    Text = ("                                         Product List")
+  }
+  { Label2 Label
+    MoveScaled(8,51,14,4)
+    Text = ("Product name : -")
+  }
+  { Label3 Label
+    MoveScaled(8,61,14,4)
+    Text = ("Units Available:- ")
+  }
+  { Label4 Label
+    MoveScaled(8,70,15,4)
+    Text = ("Price Per Unit :-")
+  }
+  { TextBox1 TextBox
+    MoveScaled(24,51,35,4)
+    Expand = True
+    ReadOnly = True
+  }
+  { TextBox2 TextBox
+    MoveScaled(24,61,35,4)
+    ReadOnly = True
+  }
+  { TextBox3 TextBox
+    MoveScaled(24,70,35,4)
+    ReadOnly = True
+  }
+  { b1 Button
+    MoveScaled(53,80,20,4)
+    Background = Color.DarkCyan
+    Foreground = Color.Cyan
+    Text = ("Delete any item")
+  }
+  { Button2 Button
+    MoveScaled(23,80,18,4)
+    Background = Color.DarkCyan
+    Foreground = Color.Cyan
+    Text = ("Go Back")
+  }
+  { Button3 Button
+    MoveScaled(81,80,22,4)
+    Background = Color.DarkCyan
+    Foreground = Color.Cyan
+    Text = ("Show Details")
+  }
+}

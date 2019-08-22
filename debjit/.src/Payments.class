@@ -1,0 +1,105 @@
+' Gambas class file
+
+
+Static Public n As Integer = 0 
+
+Public Sub Form_Open()
+  
+  Payments.cb1.Add("Credit Card")
+  Payments.cb1.Add("Net Banking")
+  Payments.cb1.Add("Debit Card")
+  Payments.cb1.Add("COD")
+  Payments.TextBox3.Text = Adminform.productName[Us_er.ind]
+  Payments.TextBox4.Text = Adminform.productPricepu[Us_er.ind]
+  Payments.TextBox6.Text = 1
+  Payments.Label11.Enabled = False
+    Payments.Label12.Enabled = False
+    Payments.Label13.Enabled = False
+    Payments.Textbox7.Enabled = False
+    Payments.Textbox8.Enabled = False
+    Payments.Textbox9.Enabled = False
+
+
+End
+
+Public Sub Button1_Click()
+
+  If Payments.n >= Adminform.productQuantity[Us_er.ind] Then
+    Adminform.productName.Remove(Us_er.ind)
+    Adminform.productQuantity.Remove(Us_er.ind)
+    Adminform.productPricepu.Remove(Us_er.ind)
+   Else
+     Adminform.productQuantity[Us_er.ind] = Adminform.productQuantity[Us_er.ind] - Payments.n
+  Endif
+  receipt.Show
+ End
+
+Public Sub Button3_Click()
+
+  Payments.Close(0)
+  Us_er.Show
+
+End
+
+Public Sub Button2_Click()
+
+  Dim psum As Integer = 0
+  n = Val(Payments.TextBox6.Text)
+  psum = Val(TextBox4.Text) * n
+  Payments.TextBox5.Text = psum
+  
+ 
+  End
+
+Public Sub Button4_Click()
+
+  Payments.TextBox6.Text = Payments.TextBox6.Text + 1
+  If Val(Payments.TextBox6.Text) > Adminform.productQuantity[Us_er.ind] Then
+    Message("insufficient stocks!!!!!!")
+  Else
+    Payments.TextBox6.Text = Payments.TextBox6.Text + 1
+  Endif
+  
+
+End
+
+Public Sub Button5_Click()
+
+  If Val(Payments.TextBox6.Text) == 0 Then
+    Payments.Button5.Enabled = False
+    Payments.TextBox6.Text = 0
+    Message("Select at least 1 item.")
+    Payments.TextBox6.Text = 0
+  Else
+    Payments.Button5.Enabled = True
+  Endif
+  Payments.TextBox6.Text = Payments.TextBox6.Text - 1
+  
+
+End
+
+Public Sub cb1_Click()
+
+  If Payments.cb1.Text == "Credit Card" Or Payments.cb1.Text == "Debit Card" Or Payments.cb1.Text == "Net Banking" Then
+    Payments.Label11.Enabled = True
+    Payments.Label12.Enabled = True
+    Payments.Label13.Enabled = True
+    Payments.Textbox7.Enabled = True
+    Payments.Textbox8.Enabled = True
+    Payments.Textbox9.Enabled = True
+  Else
+    Payments.Label11.Enabled = False
+    Payments.Label12.Enabled = False
+    Payments.Label13.Enabled = False
+    Payments.Textbox7.Enabled = False
+    Payments.Textbox8.Enabled = False
+    Payments.Textbox9.Enabled = False
+  Endif
+
+End
+
+Public Sub TextBox6_KeyPress()
+
+  
+
+End

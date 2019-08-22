@@ -1,0 +1,51 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,116,74)
+  Background = &H5FAFFF&
+  Drop = True
+  Padding = 10
+  { Label1 Label
+    MoveScaled(27,5,57,20)
+    Font = Font["Sans Serif,Bold,+2"]
+    Background = Color.ButtonForeground
+    Foreground = Color.Cyan
+    Text = ("                         LOGIN HERE")
+  }
+  { TextBox1 TextBox
+    MoveScaled(57,33,25,5)
+    Background = Color.LightForeground
+    Drop = True
+  }
+  { Button1 Button
+    MoveScaled(61,56,18,8)
+    Background = Color.LightGray
+    Foreground = Color.Foreground
+    ToolTip = ("Search")
+    Drop = True
+    Text = ("LOGIN")
+  }
+  { Button2 Button
+    MoveScaled(27,56,22,8)
+    Font = Font["Bold,+2"]
+    Background = Color.LightGray
+    Foreground = Color.Foreground
+    Text = ("Exit")
+  }
+  { Label2 Label
+    MoveScaled(27,34,24,4)
+    Background = Color.LightGray
+    Text = ("           Username :- ")
+  }
+  { Label3 Label
+    MoveScaled(27,42,24,4)
+    Background = Color.LightGray
+    Text = ("            Password :- ")
+  }
+  { TextBox2 TextBox
+    MoveScaled(57,42,25,5)
+    Background = Color.LightForeground
+    Drop = True
+    Password = True
+  }
+}
